@@ -204,7 +204,20 @@ Esto realizará:
 * Evaluación
 * Guardado del modelo
 
+
 ---
+
+## Predecir
+
+```bash
+python -m src.predict
+```
+
+Esto realizará:
+* Prediccion con los datos en el codigo
+---
+
+
 
 # 🤖 Modelos implementados
 
@@ -308,9 +321,10 @@ Las métricas finales dependerán del modelo seleccionado y la configuración ut
 
 ---
 
-# 🔥 Comando principal del proyecto
+# 🔥 Comandos principal del proyecto
 
 ```bash
 python -m src.main
+python -m src.predict
 ```
 
