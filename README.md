@@ -178,6 +178,13 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
+### linux
+
+```bash
+source venv/bin/activate
+```
+
+
 ---
 
 ## 5. Instalar dependencias
@@ -204,20 +211,29 @@ Esto realizará:
 * Evaluación
 * Guardado del modelo
 
-
 ---
-
-## Predecir
+## Prediccion
 
 ```bash
 python -m src.predict
 ```
 
 Esto realizará:
-* Prediccion con los datos en el codigo
+* La predccion del cliente registrado dentro del codigo
+
 ---
+## Ejecutar la Api
 
+```bash
+python -m uvicorn src.main:app --reload
+```
 
+Esto realizará:
+
+* El inicio de la api en [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) donde pueden probar el modelo con un diccionario de los valores del cliente deseado.
+* Podras mandar a la api en [http://127.0.0.1:8000/Predecir](http://127.0.0.1:8000/Predecir) un diccionario de los valores del cliente deseado y te respondera si continuara o no.
+
+---
 
 # 🤖 Modelos implementados
 
@@ -326,5 +342,6 @@ Las métricas finales dependerán del modelo seleccionado y la configuración ut
 ```bash
 python -m src.main
 python -m src.predict
+python -m uvicorn src.main:app --reload
 ```
 
